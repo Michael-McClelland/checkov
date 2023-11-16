@@ -25,6 +25,9 @@ class TestYamlPolicies(unittest.TestCase):
     def test_KmsKeyPolicyIsDefined(self):
         self.go("KmsKeyPolicyIsDefined")
 
+    def test_KmsKeyWildcardPrincipal(self):
+        self.go("KmsKeyWildcardPrincipal")        
+
     def test_NetworkFirewallHasLogging(self):
         self.go("NetworkFirewallHasLogging")
 
@@ -426,6 +429,27 @@ class TestYamlPolicies(unittest.TestCase):
 
     def test_AzureVMconfigPublicIP_SerialConsoleAccess(self):
         self.go("AzureVMconfigPublicIP_SerialConsoleAccess")
+
+    def test_AzurePostgreSQLserverConfigPrivEndpt(self):
+        self.go("AzurePostgreSQLserverConfigPrivEndpt")
+
+    def test_AzureMariaDBserverConfigPrivEndpt(self):
+        self.go("AzureMariaDBserverConfigPrivEndpt")
+
+    def test_AzureMySQLserverConfigPrivEndpt(self):
+        self.go("AzureMySQLserverConfigPrivEndpt")
+
+    def test_AzureMSSQLserverConfigPrivEndpt(self):
+        self.go("AzureMSSQLserverConfigPrivEndpt")
+
+    def test_AzureSynapseWorkspaceVAisEnabled(self):
+        self.go("AzureSynapseWorkspaceVAisEnabled")
+
+    def test_IBM_AppLBforVPCisPrivate(self):
+        self.go("IBM_LoadBalancerforVPCisPrivate")
+
+    def test_IBM_VPCclassicAccessIsDisabled(self):
+        self.go("IBM_VPCclassicAccessIsDisabled")
 
     def test_registry_load(self):
         registry = Registry(parser=GraphCheckParser(), checks_dir=str(
